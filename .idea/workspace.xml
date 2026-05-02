@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84fa5cde-d297-448a-8159-173299c7a459" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/01-basics.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/02-numpy.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/03-pandas.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/04-matplotlib-seaborn.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/05-data-analysis.ipynb" afterDir="false" />
+    <list default="true" id="84fa5cde-d297-448a-8159-173299c7a459" name="Changes" comment="feat(notebooks): expand data analysis workshop notebooks&#10;&#10;add practical pandas, matplotlib/seaborn, and missing-data analysis&#10;examples across the workshop notebooks, including dataframe querying,&#10;groupby aggregations, plotting exercises, and NaN visualization.&#10;&#10;also update seaborn countplot usage to include hue and legend=False to&#10;avoid deprecation warnings, and refresh local IDE project settings.">
       <change afterPath="$PROJECT_DIR$/src/A1-online-sales-data-analysis.ipynb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/A2-student-success-data-analysis.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/A3-intel-image-classification.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +18,6 @@
   </component>
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="17" />
-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,27 +53,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/burak/Repository/Educational/edu-btk-ai-and-genai-workshop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/burak/Repository/Educational/edu-btk-ai-and-genai-workshop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -99,7 +95,10 @@
       <workItem from="1772279308920" duration="7134000" />
       <workItem from="1772304720581" duration="569000" />
       <workItem from="1772349291076" duration="1090000" />
-      <workItem from="1772874336977" duration="1873000" />
+      <workItem from="1772874336977" duration="2560000" />
+      <workItem from="1773343296170" duration="620000" />
+      <workItem from="1773347658753" duration="3932000" />
+      <workItem from="1775817832514" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="Add IntelliJ IDEA project configuration files&#10;&#10;Includes the setup of `.idea` folder with necessary project settings such as modules, SDK, version control configuration, and inspection profiles.">
       <option name="closed" value="true" />
@@ -109,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772268046256</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat(notebooks): expand data analysis workshop notebooks&#10;&#10;add practical pandas, matplotlib/seaborn, and missing-data analysis&#10;examples across the workshop notebooks, including dataframe querying,&#10;groupby aggregations, plotting exercises, and NaN visualization.&#10;&#10;also update seaborn countplot usage to include hue and legend=False to&#10;avoid deprecation warnings, and refresh local IDE project settings.">
+      <option name="closed" value="true" />
+      <created>1772913330384</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1772913330384</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +124,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add IntelliJ IDEA project configuration files&#10;&#10;Includes the setup of `.idea` folder with necessary project settings such as modules, SDK, version control configuration, and inspection profiles." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add IntelliJ IDEA project configuration files&#10;&#10;Includes the setup of `.idea` folder with necessary project settings such as modules, SDK, version control configuration, and inspection profiles." />
+    <MESSAGE value="feat(notebooks): expand data analysis workshop notebooks&#10;&#10;add practical pandas, matplotlib/seaborn, and missing-data analysis&#10;examples across the workshop notebooks, including dataframe querying,&#10;groupby aggregations, plotting exercises, and NaN visualization.&#10;&#10;also update seaborn countplot usage to include hue and legend=False to&#10;avoid deprecation warnings, and refresh local IDE project settings." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(notebooks): expand data analysis workshop notebooks&#10;&#10;add practical pandas, matplotlib/seaborn, and missing-data analysis&#10;examples across the workshop notebooks, including dataframe querying,&#10;groupby aggregations, plotting exercises, and NaN visualization.&#10;&#10;also update seaborn countplot usage to include hue and legend=False to&#10;avoid deprecation warnings, and refresh local IDE project settings." />
   </component>
 </project>
